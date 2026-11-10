@@ -1704,15 +1704,24 @@ button {
 .figma-process-card-display {
   position: relative;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: clamp(20px, 3vw, 40px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(28px, 3.5vw, 48px);
   align-items: center;
-  max-width: 1220px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 36px 48px;
   background: transparent;
   border-radius: 32px;
   border: none;
+}
+
+.figma-proc-text-col {
+  min-width: 0;
+}
+
+.figma-proc-img-col {
+  min-width: 0;
+  width: 100%;
 }
 
 .figma-proc-arrow-btn {
@@ -1768,28 +1777,34 @@ button {
 
 .figma-proc-title {
   font-family: var(--font-heading), 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(22px, 3.2vh, 32px);
-  font-weight: 600;
-  color: #000000;
-  margin-bottom: clamp(8px, 1.2vh, 14px);
+  font-size: clamp(40px, 3.2vh, 50px);
+  font-weight: 700;
+  color: #734825;
+  margin-bottom: clamp(20px, 1.2vh, 30px);
   line-height: 1.25;
 }
 
 .figma-proc-desc {
   font-family: var(--font-body), 'Manrope', sans-serif;
-  font-size: clamp(15px, 2vh, 19px);
-  color: #4A3E36;
+  font-size: clamp(23px, 2vh, 32px);
+  font-weight: 700;
+  color: #000;
   line-height: 1.6;
 }
 
 .figma-proc-img-frame {
   position: relative;
   width: 100%;
-  height: clamp(220px, 34vh, 320px);
+  aspect-ratio: 1.48;
+  height: auto;
   border-radius: 28px;
   border: 3px solid #734825;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(82, 37, 4, 0.12);
+  box-shadow: 0 10px 30px rgba(82, 37, 4, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
 }
 
 @media (max-width: 1024px) {
@@ -3112,8 +3127,15 @@ button {
   }
   .figma-process-card-display {
     grid-template-columns: 1fr;
-    padding: 28px 20px;
+    padding: 24px 8px;
+    gap: 24px;
     position: relative;
+  }
+  .figma-proc-img-frame {
+    width: 100%;
+    aspect-ratio: 1.48;
+    height: auto;
+    border-radius: 20px;
   }
   .figma-process-stepper-wrap {
     padding: 0 clamp(10px, 3.5vw, 20px);

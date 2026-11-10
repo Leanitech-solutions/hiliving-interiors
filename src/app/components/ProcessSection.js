@@ -11,37 +11,37 @@ export default function ProcessSection() {
       num: 1,
       title: "Initial Consultation",
       desc: "We begin by understanding your vision, lifestyle, budget, and design goals to create a personalized interior solution.",
-      img: "/images/figma/process-img.png",
+      img: "/images/figma/process-img/1.png",
     },
     {
       num: 2,
       title: "Site Analysis",
       desc: "We assess the layout, lighting, dimensions, and architectural details to create functional and aesthetically balanced spaces.",
-      img: "/images/figma/card-kitchen.png",
+      img: "/images/figma/process-img/2.png",
     },
     {
       num: 3,
       title: "Concept Development",
       desc: "We transform your ideas into personalized design concepts with curated mood boards, color palettes, and layout plans.",
-      img: "/images/figma/card-tv.png",
+      img: "/images/figma/process-img/3.png",
     },
     {
       num: 4,
       title: "Space & Layout Design",
       desc: "We create practical layouts that maximize space, ensure smooth movement, and balance functionality with aesthetics.",
-      img: "/images/figma/card-bedroom.png",
+      img: "/images/figma/process-img/4.png",
     },
     {
       num: 5,
       title: "Material & Finish Selection",
       desc: "We choose premium materials, finishes, and furnishings that enhance the design while ensuring quality and durability.",
-      img: "/images/figma/transformation-img.png",
+      img: "/images/figma/process-img/5.png",
     },
     {
       num: 6,
       title: "Project Execution",
       desc: "Our experienced team manages execution, coordinating with contractors and vendors to ensure quality workmanship and timely delivery.",
-      img: "/images/figma/hero-bg.png",
+      img: "/images/figma/process-img/6.png",
     },
   ];
 
@@ -126,8 +126,9 @@ export default function ProcessSection() {
                 src={current.img}
                 alt={current.title}
                 fill
-                sizes="(max-width: 768px) 100vw, 420px"
-                style={{ objectFit: "cover" }}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 60vw, 800px"
+                style={{ objectFit: "contain" }}
+                priority
               />
             </div>
           </div>
